@@ -218,6 +218,61 @@ Get property details of the given property ID
             }
             
 
+# Group Live Quote
+## Live Quote [/api/v2/availabilityandrate?pax={pax}&check_in={check_in}&check_out={check_out}&property_id={prop_id}]
+Api calls regarding properties.
++ Parameters
+    + prop_id (number) - ID of the Property in the form of an integer
+    + check_in (string) - Check In date in the format "YYYY-MM-DD"
+    + check_out (string) - Check Out date in the format "YYYY-MM-DD"
+    + pax (number) - Number of adults.
+
+
+### Get Live Quote [GET]
+Get live quotes for property ID
+
+**Response Details**
+| Key   |      Value description      | Value data types |
+|:----------|:------------------------|:-----------------|
+| status | Status of the response | "Success" or "Error" |
+| message | Message if any | String |
+| data | Dictionary containing the details of the quote | Dict |
+| data&rarr; available | Status of the availability of the property | Boolean |
+| data&rarr;currency | Currency code in which | 3 digit country ISO code. |
+| data&rarr;check_in | Check in data which was provided as the GET parameter | String("YYYY-MM-DD") |
+| data&rarr;check_out | Check in data which was provided as the GET parameter | String("YYYY-MM-DD") |
+| data&rarr;units | Units of the property | Number |
+| data&rarr;total_amount | Total Amount for the booking | Float |
+| data&rarr;pax | Number of adults which was provided as the GET parameter | Integer |
+| data&rarr;tax | Total Tax | Float |
+| datad&rarr;property_id | Property ID | Integer |
+
+
++ Request
+    + Headers
+    
+                    Authorization: Token 65263027fab7d440ba4c5f3b834fb800
+    
++ Response 200 (application/json)
+    + body
+    
+            {
+                "status": "Success",
+                "message": "",
+                "data": {
+                    "available": true,
+                    "currency": "USD",
+                    "check_in": "2018-05-01",
+                    "units": 1,
+                    "total_amount": 125.4,
+                    "pax": 1,
+                    "sub_total": 125.4,
+                    "tax": 15.05,
+                    "check_out": "2018-05-05",
+                    "property_id": "11821295"
+                }
+            }
+
 
 # Group Rates
 ## Rate [/api/v2/rates?property={prop_id}&start_date={start_date}&end_date={end_date}&currency={currency}]
