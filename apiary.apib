@@ -287,10 +287,10 @@ Get live quotes for property ID
 ## Rate [/api/v2/rates?property={prop_id}&start_date={start_date}&end_date={end_date}&currency={currency}]
 Api calls regarding properties.
 + Parameters
-    + prop_id (number) - ID of the Property in the form of an integer
+    + properties (number) - ID of the Property in the form of an integer
     + start_date (string, optional) - Starting date with the format "YYY-MM-DD"
     + end_date (string, optional) - Ending date with the format "YYY-MM-DD"
-    + currency (string, optional) - 3 digit code of currency. Eg "INR", "USD"
+    + currency (string) - 3 digit code of currency. Eg "INR", "USD"
 
 
 ### Get Rates [GET]
@@ -415,7 +415,7 @@ Get rate details of the given property ID
 ## Availability [/api/v2/availabillity?property={prop_id}&start_date={start_date}&end_date={end_date}]
 Api calls regarding properties.
 + Parameters
-    + prop_id (number) - ID of the Property in the form of an integer
+    + properties (number) - ID of the Property in the form of an integer
     + start_date (string, optional) - Starting date with the format "YYY-MM-DD"
     + end_date (string, optional) - Ending date with the format "YYY-MM-DD"
 
