@@ -244,10 +244,11 @@ Get live quotes for property ID
 | data&rarr;check_in | Check in date which was provided as the GET parameter | String("YYYY-MM-DD") |
 | data&rarr;check_out | Check in date which was provided as the GET parameter | String("YYYY-MM-DD") |
 | data&rarr;units | Units of the property which was provided as the GET parameter. Defaults to 1 if not provided | Number |
-| data&rarr;total_amount | Total Amount for the booking | Float |
+| data&rarr;total_amount | Total Amount for the booking (sub_total - discount + tax + cleaning_fee/security deposit if required at the time of booking) | Float |
 | data&rarr;sub_total | Rental rate  for the property | Float |
 | data&rarr;pax | Number of adults which was provided as the GET parameter | Integer |
 | data&rarr;tax | Total Tax | Float |
+| data&rarr;discount | Discount  | Float |
 | data&rarr;property_id | Property ID | Integer |
 | data&rarr;cleaning_fee | Cleaning fee amount | Float |
 | data&rarr;cleaning_fee_inclusive | Flag if cleaning fee payment is required at the time of booking. If value is true, total_amount will be inclusive of cleaning fee. If it is false, the cleaning fee is applicable at the time of checkin. | Boolean |
@@ -276,6 +277,7 @@ Get live quotes for property ID
                 "check_in": "2018-05-01",
                 "security_deposit_inclusive": true,
                 "total_amount": 130.26,
+                "discount": 0,
                 "pax": 1,
                 "cleaning_fee": 0.16,
                 "security_deposit": 4.7,
