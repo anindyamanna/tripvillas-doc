@@ -219,7 +219,7 @@ Get property details of the given property ID
             
 
 # Group Live Quote
-## Live Quote [/api/v2/availabilityandrate?pax={pax}&check_in={check_in}&check_out={check_out}&property_id={prop_id}&units={units}]
+## Live Quote [/api/v2/availabilityandrate?pax={pax}&check_in={check_in}&check_out={check_out}&property_id={prop_id}&units={units}&currency={currency}]
 Api calls regarding properties.
 + Parameters
     + prop_id (number) - ID of the Property in the form of an integer
@@ -227,6 +227,7 @@ Api calls regarding properties.
     + check_out (string) - Check Out date in the format "YYYY-MM-DD"
     + pax (number) - Number of adults.
     + units (number, optional) - Number of units.
+    + currency (string) - 3 digit code of currency. Eg "INR", "USD"
 
 
 ### Get Live Quote [GET]
@@ -284,7 +285,7 @@ Get live quotes for property ID
 
 
 # Group Rates
-## Rate [/api/v2/rates?property={prop_id}&start_date={start_date}&end_date={end_date}&currency={currency}]
+## Rate [/api/v2/rates?property={properties}&start_date={start_date}&end_date={end_date}&currency={currency}]
 Api calls regarding properties.
 + Parameters
     + properties (number) - ID of the Property in the form of an integer
@@ -412,7 +413,7 @@ Get rate details of the given property ID
             
             
 # Group Availabilities
-## Availability [/api/v2/availabillity?property={prop_id}&start_date={start_date}&end_date={end_date}]
+## Availability [/api/v2/availabillity?property={properties}&start_date={start_date}&end_date={end_date}]
 Api calls regarding properties.
 + Parameters
     + properties (number) - ID of the Property in the form of an integer
