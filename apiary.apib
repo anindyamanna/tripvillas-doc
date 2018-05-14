@@ -5,10 +5,10 @@ HOST: https://www.tripvillas.com
 
 Documentation for all APIs of Tripvillas.
 
-## Properties [/api/v3/property-fetch?prop_id={prop_id}]
+## Properties [/api/v3/property-fetch?property_id={property_id}]
 Api calls regarding properties.
 + Parameters
-    + prop_id (number) - ID of the Property in the form of an integer
+    + property_id (number) - ID of the Property in the form of an integer
 
 
 ### Get Property Details [GET]
@@ -287,10 +287,10 @@ Get live quotes for property ID
 
 
 # Group Rates
-## Rate [/api/v2/rates?properties={properties}&start_date={start_date}&end_date={end_date}&currency={currency}]
+## Rate [/api/v2/rates?property_id={property_id}&start_date={start_date}&end_date={end_date}&currency={currency}]
 Api calls regarding properties.
 + Parameters
-    + properties (number) - ID of the Property in the form of an integer
+    + property_id (number) - ID of the Property in the form of an integer
     + start_date (string, optional) - Starting date with the format "YYY-MM-DD"
     + end_date (string, optional) - Ending date with the format "YYY-MM-DD"
     + currency (string) - 3 digit code of currency. Eg "INR", "USD"
@@ -415,10 +415,10 @@ Get rate details of the given property ID
             
             
 # Group Availabilities
-## Availability [/api/v2/availabillity?properties={properties}&start_date={start_date}&end_date={end_date}]
+## Availability [/api/v2/availabillity?property_id={property_id}&start_date={start_date}&end_date={end_date}]
 Api calls regarding properties.
 + Parameters
-    + properties (number) - ID of the Property in the form of an integer
+    + property_id (number) - ID of the Property in the form of an integer
     + start_date (string, optional) - Starting date with the format "YYY-MM-DD"
     + end_date (string, optional) - Ending date with the format "YYY-MM-DD"
 
