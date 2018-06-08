@@ -22,6 +22,8 @@ Get property details of the given property ID
 | bathrooms | Number of bathrooms | Integer |
 | description | Long description of property | String |
 | title | Name of the property | String |
+| sub_property_type | Type of the property. Refer to [Sub Property Type](#sub_property_types) | String |
+| active | Flag if the property is active on Tripvillas | Boolean |
 | propertyID | Tripvillas Id of the property | String |
 | url | Url of the property | String |
 | structure | Structure of the property according to room types | One dict having 4 keys:<br> "bathrooms", "bedrooms", "living_room" and "kitchen"|
@@ -46,7 +48,7 @@ Get property details of the given property ID
 | structure&rarr;kitchen &rarr;images | (only in available) Images of the kitchen | List of dicts |
 | structure&rarr;kitchen &rarr;amenities | (only in available) Amenities of the kitchen | List of Strings |
 | images | Property level images | List of dicts |
-| amenities | Property level Amenities | List of Strings |
+| amenities | Property level [Amenities](#amenities) | List of Strings |
 | bedrooms | Number of bedrooms | Number |
 | maxOccupancy | Maximum occupancy of the property | Integer |
 | currency | Currency of the property. Cleaning fee and deposit are in same currency | 3 digit currency code (string) | 
@@ -95,6 +97,9 @@ Get property details of the given property ID
                   "bathrooms": 1,
                   "description": "This luxurious & cozy apartment is located in Arpora, North Goa, which is famous for its Saturday Night Market. Conveniently located, it is surrounded by lush greens and is only ten minutes away from the buzzing life of Goa, be it the beach, or any of the popular clubs. The architecture is contemporary with a huge courtyard in the center and a lounge on the ground floor, making the apartments look welcoming and luxurious.",
                   "title": "Deluxe Room stay",
+                  "active": false,
+                  "sub_property_type": "Apartment",
+                  
                   "url": "http://tripvillas.com/12397906",
                   "structure": {
                     "bathrooms": [
@@ -957,7 +962,39 @@ Create a new Booking or cancel an existing booking on Tripvillas.
 
     
 # Group Miscellaneous
-## List of Amenities
+<a name="sub_property_types"></a>
+## Sub Property Types
+- Apartment
+- Bed and Breakfast
+- Boutique Hotel
+- Bungalow
+- Cabin
+- Camping Ground
+- Caravan
+- Castle
+- Chalet
+- Condo
+- Cottage
+- Farm
+- Guesthouse
+- Holiday park
+- Home
+- Homestay
+- Hostel
+- Hotel
+- HouseBoats
+- Lodge
+- Luxury Yacht
+- Other
+- Resort
+- Room
+- Ryokan (Japanese Inn)
+- Serviced Apartment
+- Studio
+- Villa
+
+<a name="amenities"></a>
+## List of AmenitiesChanged
 ### Common Amenities
 - Gym
 - Power backup
